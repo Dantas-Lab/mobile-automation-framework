@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Reports and artifacts
+reports/
+screenshots/
+logs/
+
+# Environment
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# App files
+app/*.apk
+app/*.aab
+app/*.ipa
