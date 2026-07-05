@@ -1,17 +1,8 @@
-from appium import webdriver
-from appium.options.android import UiAutomator2Options
+from driver.driver_factory import create_android_driver
 
 
 def test_android_connection():
-    options = UiAutomator2Options()
-    options.platform_name = "Android"
-    options.automation_name = "UiAutomator2"
-    options.device_name = "emulator-5554"
-
-    driver = webdriver.Remote(
-        command_executor="http://127.0.0.1:4723",
-        options=options,
-    )
+    driver = create_android_driver()
 
     assert driver.session_id is not None
 
